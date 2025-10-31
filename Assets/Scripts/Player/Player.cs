@@ -11,6 +11,9 @@ public class player : MonoBehaviour
     //Number of coins
     private int coins;
     [SerializeField] private TMP_Text Scoreboard;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite Ying;
+    [SerializeField] private Sprite Yang;
     
     
     
@@ -111,8 +114,7 @@ public class player : MonoBehaviour
         {
             if (mirrorTimer >= 0.3f )
             {
-                SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-                spriteRenderer.color = Color.rebeccaPurple;
+                spriteRenderer.sprite = Yang;
                 isInMirrorWorld = true; 
             }
         }
@@ -129,8 +131,7 @@ public class player : MonoBehaviour
             if (mirrorTimer >= 0.3f)
             {
                 isInMirrorWorld = false;
-                SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-                spriteRenderer.color = Color.orange;
+                spriteRenderer.sprite = Ying;
             }
         }
     }
