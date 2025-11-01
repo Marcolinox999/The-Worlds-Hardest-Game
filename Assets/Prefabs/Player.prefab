@@ -109,7 +109,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4475662709124212517}
   Ying: {fileID: 1198788876432926249, guid: c866560180206d9488a482c1f7b1d848, type: 3}
   Yang: {fileID: 6089463438917663056, guid: 5c7b06241d3cea149a99ef5a49daed98, type: 3}
-  nextLevel: 
+  nextLevel: Level1
   hInput: 0
   vInput: 0
   speed: 5
