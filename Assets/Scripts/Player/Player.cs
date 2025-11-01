@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.DualShock.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class player : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite Ying;
     [SerializeField] private Sprite Yang;
+    [SerializeField] private string nextLevel;
     
     
     
@@ -39,7 +41,10 @@ public class player : MonoBehaviour
     {
         mirrorTimer += Time.deltaTime;
         Movement();
-        
+        if (coins == 4)
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
     }
 
     private void Movement()
