@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7041341640769107078}
   - component: {fileID: 4343308260122824969}
-  - component: {fileID: 1566063245014925644}
-  - component: {fileID: 6780516715632480916}
-  - component: {fileID: 9159987632697204214}
   - component: {fileID: 8506645253557066606}
   - component: {fileID: 5695836670853224153}
   m_Layer: 0
@@ -84,60 +81,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 8537651536920830917, guid: 55ad9e8d7ece9814bba09922e2565aae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1566063245014925644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3345990906934099277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd858b753555a546877c1a16b14da73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemon
-  name: A
---- !u!114 &6780516715632480916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3345990906934099277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb2528038fa2794469ae53c32df2c7ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::gameManager
---- !u!114 &9159987632697204214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3345990906934099277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6597cd4b8a64fb4aa20b3a4c473a448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DAY1
-  numberA: 5
-  myName: Marco
-  solutionForPuzzle: 88
-  numberWithDecimals: 3.3
-  poisoned: 1
-  example: 3
 --- !u!50 &8506645253557066606
 Rigidbody2D:
   serializedVersion: 5
@@ -206,7 +160,7 @@ BoxCollider2D:
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
