@@ -13,6 +13,9 @@ public class player : MonoBehaviour
     [SerializeField] private Sprite Ying;
     [SerializeField] private Sprite Yang;
     [SerializeField] private string nextLevel;
+    [SerializeField] private AudioSource audioSourceBell;
+    [SerializeField] private AudioSource audioClipHit;
+    [SerializeField] private AudioSource audioClipButton;
     
     
     
@@ -84,9 +87,9 @@ public class player : MonoBehaviour
 
         if (other.gameObject.CompareTag("Trap"))
         {
-            Debug.Log("ouch!!");
             //destroys the gameObject, if you only use other it will destroy the collider2D
             //Destroy(this.gameObject);
+            audioSourceBell.Play();
             this.gameObject.transform.position = initialPosition;
         }
 
@@ -99,7 +102,7 @@ public class player : MonoBehaviour
         {
             if (hInput != 0 || vInput != 0)
             {
-                Debug.Log("inverted");
+                audioClipHit.Play();
                 gameObject.transform.position = initialPosition;
             }
         }
@@ -107,6 +110,12 @@ public class player : MonoBehaviour
         if (other.gameObject.CompareTag("Reality"))
         {
             mirrorTimer = 0;
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            audioClipHit.Play();
+            this.gameObject.transform.position = initialPosition;
         }
     }
 
@@ -124,8 +133,8 @@ public class player : MonoBehaviour
         {
             if (hInput != 0 || vInput != 0)
             {
-                Debug.Log("inverted");
                 gameObject.transform.position = initialPosition;
+                audioClipHit.Play();
             }
         }
         if (other.gameObject.CompareTag("Reality"))
@@ -141,7 +150,8 @@ public class player : MonoBehaviour
     
     private void UpdateCoins(Collider2D other)
     {
-        Debug.Log("chicling!");
+        audioClipButton.Play();
+        //Debug.Log("chicling!");
         coins++; // adds a coin for each collision
         //destroys the gameObject that THIS OBJECT IS TOUCHING (The coin not the player), if you only use other it will destroy the collider2D
         Destroy(other.gameObject);

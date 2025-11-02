@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
         //this will only work in the build of the game
         Application.Quit();
     }
+
+    public void OnPlayAgainButtonClicked()
+    {
+        SceneManager.LoadScene("Main menu");
+    }
 }
